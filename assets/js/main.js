@@ -1,28 +1,3 @@
-/***************************************************
-==================== JS INDEX ======================
-****************************************************
-01. PreLoader Js
-02. Mobile Menu Js
-03. Common Js
-04. Menu Controls JS
-05. Offcanvas Js
-06. Search Js
-07. cartmini Js
-08. filter
-09. Body overlay Js
-10. Sticky Header Js
-11. Theme Settings Js
-12. Nice Select Js
-13. Smooth Scroll Js
-14. Slider Activation Area Start
-15. Masonary Js
-16. Wow Js
-17. Counter Js
-18. InHover Active Js
-19. Line Animation Js
-20. Video Play Js
-21. Password Toggle Js
-****************************************************/
 
 (function ($) {
 	"use strict";
@@ -30,8 +5,8 @@
 	var windowOn = $(window);
 
 
-	// 08. Nice Select Js
-	$('select').niceSelect();
+	// // 08. Nice Select Js
+	// $('select').niceSelect();
 
 
 	function back_to_top() {
@@ -72,17 +47,7 @@
 	});
 
 
-	$("#slider-range").slider({
-		range: true,
-		min: 0,
-		max: 1200,
-		values: [80, 700],
-		slide: function (event, ui) {
-			$("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
-		}
-	});
-	$("#amount").val("$" + $("#slider-range").slider("values", 0) +
-		" - $" + $("#slider-range").slider("values", 1));
+	
 
 
 	////////////////////////////////////////////////////
@@ -169,7 +134,7 @@
 
 	////////////////////////////////////////////////////
 	// 12. Nice Select Js
-	$('.tp-header-search-category select').niceSelect();
+	// $('.tp-header-search-category select').niceSelect();
 
 	////////////////////////////////////////////////////
 	// 13. Smooth Scroll Js
@@ -206,61 +171,6 @@
 	back_to_top();
 
 
-	$('.tp-hero__slider-active').slick({
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		dots: false,
-		arrows: true,
-		dots: false,
-		fade: true,
-		autoplay: true,
-		prevArrow: `<button type="button" class="slick-prev">
-		<svg width="71" height="36" viewBox="0 0 71 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-		<path d="M1.00451 19.3396L16.8581 35.1769C17.4276 35.8412 18.4284 35.9186 19.0934 35.3496C19.7584 34.7807 19.8359 33.7809 19.2663 33.1166C19.2132 33.0546 19.1554 32.9968 19.0934 32.9439L5.95079 19.799H68.7155C69.591 19.799 70.3008 19.0899 70.3008 18.2152C70.3008 17.3405 69.591 16.6315 68.7155 16.6315H5.95079L19.0934 3.50255C19.7584 2.93365 19.8359 1.93385 19.2663 1.26954C18.6967 0.605236 17.696 0.527798 17.031 1.09683C16.969 1.14991 16.9111 1.20762 16.8581 1.26954L1.00437 17.1068C0.389786 17.7243 0.389786 18.7219 1.00451 19.3396Z" fill="currentcolor"/>
-		</svg></button>`,
-		nextArrow: `<button type="button" class="slick-next">
-		<svg width="71" height="36" viewBox="0 0 71 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-		<path d="M70.1547 16.3908L54.3011 0.553609C53.7316 -0.110699 52.7308 -0.18814 52.0658 0.380897C51.4008 0.949798 51.3233 1.94959 51.8929 2.6139C51.946 2.67583 52.0038 2.73367 52.0658 2.78661L65.2084 15.9315H2.44371C1.56822 15.9315 0.858398 16.6406 0.858398 17.5153C0.858398 18.39 1.56822 19.099 2.44371 19.099H65.2084L52.0658 32.2279C51.4008 32.7968 51.3233 33.7966 51.8929 34.4609C52.4625 35.1252 53.4632 35.2027 54.1282 34.6336C54.1902 34.5806 54.2481 34.5229 54.3011 34.4609L70.1548 18.6237C70.7694 18.0062 70.7694 17.0086 70.1547 16.3908Z" fill="currentcolor"/>
-		</svg>
-		</button>`,
-		responsive: [
-			{
-				breakpoint: 1200,
-				settings: {
-					slidesToShow: 1,
-				}
-			},
-			{
-				breakpoint: 992,
-				settings: {
-					slidesToShow: 1,
-					arrows: false,
-				}
-			},
-			{
-				breakpoint: 768,
-				settings: {
-					slidesToShow: 1,
-					arrows: false,
-				}
-			},
-			{
-				breakpoint: 576,
-				settings: {
-					slidesToShow: 1,
-					arrows: false,
-				}
-			},
-			{
-				breakpoint: 480,
-				settings: {
-					slidesToShow: 1,
-					arrows: false,
-				}
-			}
-
-		]
-	});
 
 	////team-slider
 	var team = new Swiper('.tp-team-slider-active', {
@@ -844,197 +754,9 @@
 	});
 
 
-	if ($('#port-showcase-slider-main').length > 0) {
 
-		const showcaseSwiper = new Swiper('#showcase-slider', {
-			direction: "horizontal",
-			loop: true,
-			slidesPerView: 'auto',
-			touchStartPreventDefault: false,
-			speed: 1000,
-			autoplay: {
-				delay: 5000
-			},
-			mousewheel: true,
-			simulateTouch: true,
-			navigation: {
-				clickable: true,
-				nextEl: '.swiper-next',
-				prevEl: '.swiper-prev',
-			},
-			pagination: {
-				el: '.tp-slider-dot',
-				clickable: true,
-				renderBullet: function (index, className) {
-					return '<div class="' + className + '"></div>';
-				},
-			},
-			on: {
-				slidePrevTransitionStart: function () {
 
-					$('.tp-slider-dot').find('.swiper-pagination-bullet').each(function () {
-						if (!$(this).hasClass("swiper-pagination-bullet-active")) {
-							$('#trigger-slides .swiper-slide-active').find('div').first().each(function () {
-								if (!$(this).hasClass("active")) {
-									$(this).trigger('click');
-								}
-							});
 
-							$('#trigger-slides .swiper-slide-duplicate-active').find('div').first().each(function () {
-								if (!$(this).hasClass("active")) {
-									$(this).trigger('click');
-								}
-							});
-						}
-					});
-
-				},
-				slideNextTransitionStart: function () {
-
-					$('.tp-slider-dot').find('.swiper-pagination-bullet').each(function () {
-						if (!$(this).hasClass("swiper-pagination-bullet-active")) {
-							$('#trigger-slides .swiper-slide-active').find('div').first().each(function () {
-								if (!$(this).hasClass("active")) {
-									$(this).trigger('click');
-								}
-							});
-
-							$('#trigger-slides .swiper-slide-duplicate-active').find('div').first().each(function () {
-								if (!$(this).hasClass("active")) {
-									$(this).trigger('click');
-								}
-							});
-						}
-					});
-
-				}
-			},
-		});
-
-		var vertex = 'varying vec2 vUv; void main() {  vUv = uv;  gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );	}';
-		var fragment = `
-		varying vec2 vUv;
-	
-		uniform sampler2D currentImage;
-		uniform sampler2D nextImage;
-		uniform sampler2D disp;
-		uniform float dispFactor;
-		uniform float effectFactor;
-		uniform vec4 resolution;
-	
-		void main() {
-	
-			vec2 uv = (vUv - vec2(0.5))*resolution.zw + vec2(0.5);
-	
-			vec4 disp = texture2D(disp, uv);
-			vec2 distortedPosition = vec2(uv.x + dispFactor * (disp.r*effectFactor), uv.y);
-			vec2 distortedPosition2 = vec2(uv.x - (1.0 - dispFactor) * (disp.r*effectFactor), uv.y);
-			vec4 _currentImage = texture2D(currentImage, distortedPosition);
-			vec4 _nextImage = texture2D(nextImage, distortedPosition2);
-			vec4 finalTexture = mix(_currentImage, _nextImage, dispFactor);
-	
-			gl_FragColor = finalTexture; }
-	
-		`;
-
-		var gl_canvas = new WebGL({
-			vertex: vertex,
-			fragment: fragment,
-		});
-
-		var addEvents = function () {
-
-			var triggerSlide = Array.from(document.getElementById('trigger-slides').querySelectorAll('.slide-wrap'));
-			gl_canvas.isRunning = false;
-
-			triggerSlide.forEach((el) => {
-
-				el.addEventListener('click', function () {
-
-					if (!gl_canvas.isRunning) {
-
-						gl_canvas.isRunning = true;
-
-						document.getElementById('trigger-slides').querySelectorAll('.active')[0].className = '';
-						this.className = 'active';
-
-						var slideId = parseInt(this.dataset.slide, 10);
-
-						gl_canvas.material.uniforms.nextImage.value = gl_canvas.textures[slideId];
-						gl_canvas.material.uniforms.nextImage.needsUpdate = true;
-
-						gsap.to(gl_canvas.material.uniforms.dispFactor, {
-							duration: 1,
-							value: 1,
-							ease: 'Sine.easeInOut',
-							onComplete: function () {
-								gl_canvas.material.uniforms.currentImage.value = gl_canvas.textures[slideId];
-								gl_canvas.material.uniforms.currentImage.needsUpdate = true;
-								gl_canvas.material.uniforms.dispFactor.value = 0.0;
-								gl_canvas.isRunning = false;
-							}
-						});
-
-					}
-
-				});
-
-			});
-
-		};
-
-		addEvents();
-	}
-
-	////portfolio-slider
-	$('.portfolio-slider-active').slick({
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		arrows: false,
-		fade: false,
-		asNavFor: '.portfolio-nav-slider-active',
-		fade: true,
-		mousewheel: true,
-	});
-
-	$('.portfolio-nav-slider-active').slick({
-		slidesToShow: 7,
-		slidesToScroll: 1,
-		asNavFor: '.portfolio-slider-active',
-		dots: false,
-		arrows: false,
-		vertical: true,
-		focusOnSelect: true,
-		centerPadding: '0',
-		mousewheel: true,
-		responsive: [
-			{
-				breakpoint: 1200,
-				settings: {
-					slidesToShow: 5,
-				}
-			},
-			{
-				breakpoint: 992,
-				settings: {
-					slidesToShow: 4,
-				}
-			},
-			{
-				breakpoint: 768,
-				settings: {
-					slidesToShow: 4,
-				}
-			},
-			{
-				breakpoint: 480,
-				settings: {
-					arrows: false,
-					slidesToShow: 4,
-				}
-			}
-		]
-	});
 
 
 	/////////////////////////////////////////////////////
@@ -1083,18 +805,7 @@
 	thumbSlider11.controller.control = mainSlider11;
 	/////////////////////////////////////////////////////
 
-	////portfolio-slider
-	$('.tp-portfolio-11-slider-active').slick({
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		prevArrow: '<button type="button" class="slick-prev"><i class="fa-light fa-angle-left"></i></button>',
-		nextArrow: '<button type="button" class="slick-next"><i class="fa-light fa-angle-right"></i></button>',
-		arrows: true,
-		fade: false,
-		asNavFor: '.tp-portfolio-11-slider-nav-active',
-		fade: true,
-		speed: 1000,
-	});
+
 
 	var helpers = {
 		addZeros: function (n) {
@@ -1102,81 +813,6 @@
 		}
 	};
 
-	function sliderInit() {
-		var $slider = $('.tp-portfolio-11-slider-nav-active');
-		$slider.each(function () {
-			var $sliderParent = $(this).parent();
-			$(this).slick({
-				slidesToShow: 4,
-				slidesToScroll: 1,
-				asNavFor: '.tp-portfolio-11-slider-active',
-				arrows: true,
-				prevArrow: '<button type="button" class="slick-prev"><i class="fa-light fa-angle-left"></i></button>',
-				nextArrow: '<button type="button" class="slick-next"><i class="fa-light fa-angle-right"></i></button>',
-				dots: false,
-				focusOnSelect: true,
-				centerPadding: '0',
-				speed: 600,
-				responsive: [
-					{
-						breakpoint: 1600,
-						settings: {
-							slidesToShow: 3,
-						}
-					},
-					{
-						breakpoint: 1400,
-						settings: {
-							slidesToShow: 2,
-						}
-					},
-					{
-						breakpoint: 1200,
-						settings: {
-							slidesToShow: 2,
-						}
-					},
-					{
-						breakpoint: 992,
-						settings: {
-							arrows: false,
-							slidesToShow: 4,
-						}
-					},
-					{
-						breakpoint: 768,
-						settings: {
-							arrows: false,
-							slidesToShow: 4,
-						}
-					},
-					{
-						breakpoint: 768,
-						settings: {
-							arrows: false,
-							slidesToShow: 4,
-						}
-					},
-					{
-						breakpoint: 480,
-						settings: {
-							arrows: false,
-							slidesToShow: 4,
-						}
-					},
-				]
-			});
-
-			if ($(this).find('.tp-portfolio-11-slider-nav-item').length > 1) {
-				$(this).siblings('.slides-numbers').show();
-			}
-			$(this).on('afterChange', function (event, slick, currentSlide) {
-				$sliderParent.find('.slides-numbers .active').html(helpers.addZeros(currentSlide + 1));
-			});
-
-		});
-	};
-	sliderInit();
 
 
 
@@ -1273,77 +909,8 @@
 		}
 	};
 
-	////////////////////////////////////////////////////
-	// 15. Masonary Js
-	$('.grid').imagesLoaded(function () {
-		// init Isotope
-		var $grid = $('.grid').isotope({
-			itemSelector: '.grid-item',
-			percentPosition: true,
-			layoutMode: 'fitRows',
-			masonry: {
-				// use outer width of grid-sizer for columnWidth
-				columnWidth: '.grid-item',
-			}
-		});
 
 
-		// filter items on button click
-		$('.masonary-menu').on('click', 'button', function () {
-			var filterValue = $(this).attr('data-filter');
-			$grid.isotope({ filter: filterValue });
-		});
-
-		//for menu active class
-		$('.masonary-menu button').on('click', function (event) {
-			$(this).siblings('.active').removeClass('active');
-			$(this).addClass('active');
-			event.preventDefault();
-		});
-
-	});
-
-	////////////////////////////////////////////////////
-	// 15. Masonary Js
-	$('.grid-2').imagesLoaded(function () {
-		// init Isotope
-		var $grid = $('.grid-2').isotope({
-			itemSelector: '.grid-item-2',
-			percentPosition: true,
-			masonry: {
-				// use outer width of grid-sizer for columnWidth
-				columnWidth: '.grid-item-2',
-			}
-		});
-
-
-		// filter items on button click
-		$('.masonary-menu').on('click', 'button', function () {
-			var filterValue = $(this).attr('data-filter');
-			$grid.isotope({ filter: filterValue });
-		});
-
-		//for menu active class
-		$('.masonary-menu button').on('click', function (event) {
-			$(this).siblings('.active').removeClass('active');
-			$(this).addClass('active');
-			event.preventDefault();
-		});
-
-	});
-
-	/* magnificPopup img view */
-	$('.popup-image').magnificPopup({
-		type: 'image',
-		gallery: {
-			enabled: true
-		}
-	});
-
-	/* magnificPopup video view */
-	$(".popup-video").magnificPopup({
-		type: "iframe",
-	});
 
 
 	if ($('.scene').length > 0) {
@@ -1353,72 +920,9 @@
 		});
 	};
 
-	function tp_ecommerce() {
-		$('.tp-cart-minus').on('click', function () {
-			var $input = $(this).parent().find('input');
-			var count = parseInt($input.val()) - 1;
-			count = count < 1 ? 1 : count;
-			$input.val(count);
-			$input.change();
-			return false;
-		});
-
-		$('.tp-cart-plus').on('click', function () {
-			var $input = $(this).parent().find('input');
-			$input.val(parseInt($input.val()) + 1);
-			$input.change();
-			return false;
-		});
-
-		$('.tp-checkout-payment-item label').on('click', function () {
-			$(this).siblings('.tp-checkout-payment-desc').slideToggle(400);
-
-		});
-
-
-		$('.tp-color-variation-btn').on('click', function () {
-			$(this).addClass('active').siblings().removeClass('active');
-		});
-
-
-		$('.tp-size-variation-btn').on('click', function () {
-			$(this).addClass('active').siblings().removeClass('active');
-		});
-
-		////////////////////////////////////////////////////
-		// 17. Show Login Toggle Js
-		$('.tp-checkout-login-form-reveal-btn').on('click', function () {
-			$('#tpReturnCustomerLoginForm').slideToggle(400);
-		});
-
-		////////////////////////////////////////////////////
-		// 18. Show Coupon Toggle Js
-		$('.tp-checkout-coupon-form-reveal-btn').on('click', function () {
-			$('#tpCheckoutCouponForm').slideToggle(400);
-		});
-
-		////////////////////////////////////////////////////
-		// 19. Create An Account Toggle Js
-		$('#cbox').on('click', function () {
-			$('#cbox_info').slideToggle(900);
-		});
-
-		////////////////////////////////////////////////////
-		// 20. Shipping Box Toggle Js
-		$('#ship-box').on('click', function () {
-			$('#ship-box-info').slideToggle(1000);
-		});
-	}
-	tp_ecommerce();
+	
 
 	////////////////////////////////////////////////////
-	// 17. Counter Js
-	new PureCounter();
-	new PureCounter({
-		filesizing: true,
-		selector: ".filesizecount",
-		pulse: 2,
-	});
 
 	////////////////////////////////////////////////////
 	// 18. InHover Active Js
@@ -2979,31 +2483,7 @@
 	});
 
 
-	let ht = gsap.matchMedia();
-	ht.add("(min-width: 576px)", () => {
 
-		/* portfolio animation start */
-		if ($('.tp-hero-5-area').length > 0) {
-
-			gsap.timeline({
-				scrollTrigger: {
-					trigger: '.tp-hero-5-area ',
-					start: 'top 30%',
-					end: 'bottom 20%',
-					scrub: true,
-					invalidateOnRefresh: true
-				}
-			})
-				.to('.tp-hero-5-title ', {
-					x: '-25%'
-				});
-			gsap.set('.tp-hero-5-title', {
-				x: '18%'
-			});
-
-		}
-
-	});
 
 
 	$('.tp-port-slider-title').on("mouseenter", function () {

@@ -13,3 +13,23 @@
 .tp-brand-brd-top {
     padding-top: 100px;
 }
+
+.tp-service-item {
+    border-bottom: 1px solid;
+    padding-bottom: 35px;
+}
+.tp-hero-shape-1 img {
+    width: 790px;
+    height: 700px;
+}
+ span.red {
+    display: inline-block;
+    color: #ba1d2a;
+}
+.tp-hero-content p span.red {
+    margin-left: 0;
+    display: inline-block;
+    color: #ba1d2a;
+    margin-right: 5px;
+    font-weight: 500;
+}
