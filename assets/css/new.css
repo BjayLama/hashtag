@@ -33,3 +33,205 @@
     margin-right: 5px;
     font-weight: 500;
 }
+
+.favicon-img {
+    width: 32px;
+    margin-right: 0;
+}
+
+.splitting span:not(.whitespace) {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.splitting span .word {
+  position: relative;
+  transform: translate(0, 100%);
+  transition: transform 0.6s cubic-bezier(0.3, 0, 0.3, 1);
+  -webkit-transition: transform 0.6s cubic-bezier(0.3, 0, 0.3, 1);
+}
+
+.splitting span .word {
+  -webkit-transition-delay: calc(100ms + 100ms * var(--line-index));
+  transition-delay: calc(100ms + 100ms * var(--line-index));
+}
+
+.animated--active .splitting[data-scroll=in] span .word,
+.animated--swiper--active .swiper-slide-active .splitting span .word {
+  transform: translate(0, 0%);
+}
+
+.client-reviews-carousel.reviews--full .client-reviews-item .text {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.client-reviews-item .text p {
+  margin-top: 0;
+  font-size: 26px;
+  line-height: 1.5;
+  color: #cdcdcd;
+}
+.client-reviews-item h5.title {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0px 0px 10px;
+    line-height: 1.5;
+    color: #ba1d2a;
+}
+.client-reviews-item .subtitle span {
+    display: inline-block;
+    vertical-align: top;
+    line-height: 21px;
+    font-size: 22px;
+    letter-spacing: 0.5px;
+}
+h2.client-title-2, .client-title-2 {
+    font-size: 48px;
+    color: #ffffff;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.client-reviews-summary .label span {
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.client-reviews-carousel {
+    padding-left: 55px;
+    border-left: 1px solid rgb(177, 177, 177);
+}
+
+.client-prev, .client-next, .pager .client-prev, .pager .client-next, .slidePrev-btn, .slideNext-btn {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 67px;
+    height: 67px;
+    border: 1px solid #cdcdcd;
+    border-radius: 67px;
+    cursor: pointer;
+    background: transparent !important;
+}
+.client-prev i, .client-next i, .slidePrev-btn i, .slideNext-btn i {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.4s cubic-bezier(0.3, 0, 0.3, 1);
+    -webkit-transition: all 0.4s cubic-bezier(0.3, 0, 0.3, 1);
+}
+.client-prev i::before, .slideNext-btn i::before, .slidePrev-btn i::before, .client-next i::before {
+    margin-top: -1px;
+    content: "";
+    position: absolute;
+    left: 34px;
+    top: 50%;
+    width: 50px;
+    height: 3px;
+    background: #ba1d2a;
+    transition: all 0.4s cubic-bezier(0.3, 0, 0.3, 1);
+    -webkit-transition: all 0.4s 
+}
+.client-next i::before, .slideNext-btn i::before {
+    left: auto;
+    right: 34px;
+}
+.client-prev i::after, .slideNext-btn i::after, .slidePrev-btn i::after, .client-next i::after {
+    margin-top: -7px;
+    content: "";
+    position: absolute;
+    left: 19px;
+    top: 50%;
+    border: 8px solid transparent;
+    border-right: 8px solid #ba1d2a;
+    transition: all 0.4s cubic-bezier(0.3, 0, 0.3, 1);
+    -webkit-transition: all 0.4s cubic-bezier(0.3, 0, 0.3, 1);
+}
+.client-next i::after, .slideNext-btn i::after {
+    left: auto;
+    right: 19px;
+    border-right: 8px solid transparent;
+    border-left: 8px solid #ba1d2a;
+}
+.js-reviews-carousel-navs {
+  position: absolute;
+  left: 0;
+  bottom: 25px;
+  font-size: 0;
+}
+
+.js-reviews-carousel-navs .client-prev,
+.js-reviews-carousel-navs .client-next {
+  margin-right: 58px;
+}
+
+.client-reviews-carousel.reviews--full .js-reviews-carousel-navs {
+  margin-top: -33px;
+  top: 50%;
+  bottom: auto;
+  width: 100%;
+  height: 1px;
+  z-index: 2;
+}
+
+.client-reviews-carousel.reviews--full .client-prev,
+.client-reviews-carousel.reviews--full .client-next {
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.client-reviews-carousel.reviews--full .client-next {
+  left: auto;
+  right: 0;
+}
+.client-reviews {
+    position: relative;
+}
+.client-next:hover i, .slideNext-btn:hover i {
+    transform: translateX(5px);
+}
+.client-prev:hover i, .slidePrev-btn:hover i {
+    transform: translateX(-5px);
+}
+
+.tp-hero-title-img {
+  display: inline-block;
+  position: relative;
+}
+
+.tp-zoom-img {
+  opacity: 0;
+  width: 0;
+  transform: scale(0);
+  vertical-align: middle; /* keeps text alignment smooth */
+  height: 120px;
+}
+
+.down-text {
+    display: inline-block;
+    font-size: 144px;
+}
+
+.head-favicon img {
+    width: 20px;
+    margin-right: 5px;
+}
+/* .tp-footer-menu ul li:hover a span {
+    color: #ba1d2a;
+} */
+
+@media only screen and (max-width: 1199.9px) {
+    .tp-brand-area {
+        padding-top: 100px;
+    }
+    .tp-header-menu > nav > ul > li {
+        margin: 0 20px;
+    }
+}

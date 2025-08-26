@@ -1213,27 +1213,42 @@
 	});
 
 
-	let zm = gsap.matchMedia();
-	zm.add("(min-width: 1200px)", () => {
-		if ($('.tp-hero-area').length > 0) {
-			// Testimonial 3 Image Animation
-			gsap.set(".tp-zoom-img", { scale: 0, opacity: 0 });
+	// let zm = gsap.matchMedia();
+	// zm.add("(min-width: 1200px)", () => {
+	// 	if ($('.tp-hero-area').length > 0) {
+	// 		// Testimonial 3 Image Animation
+	// 		gsap.set(".tp-zoom-img", { scale: 0, opacity: 0 });
 
-			gsap.to(".tp-zoom-img", {
-				scrollTrigger: {
-					trigger: ".tp-hero-area",
-					start: "center center",
-					markers: false
-				},
-				duration: 1.5,
-				ease: "none",
-				scale: 1,
-				opacity: 1,
-			})
+	// 		gsap.to(".tp-zoom-img", {
+	// 			scrollTrigger: {
+	// 				trigger: ".tp-hero-area",
+	// 				start: "center center",
+	// 				markers: false
+	// 			},
+	// 			duration: 1.5,
+	// 			ease: "none",
+	// 			scale: 1,
+	// 			opacity: 1,
+	// 		})
 
-		}
-	});
+	// 	}
+	// });
 
+	// Run after page load
+$(window).on("load", function () {
+  gsap.to(".tp-zoom-img", {
+	delay: 1,
+    duration: 1.5,
+    opacity: 1,
+    scale: 1,
+    width: "auto", // allow natural width
+    ease: "power3.out",
+    onStart: function () {
+      // while animating, switch to static positioning so it pushes text
+      $(".tp-zoom-img").css("position", "static");
+    }
+  });
+});
 
 
 
