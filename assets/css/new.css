@@ -231,6 +231,10 @@ h2.client-title-2, .client-title-2 {
 .tp-offcanvas-main .tp-btn-border-sm {
     margin-top: 15px;
 } 
+
+.full-none {
+    display: none;
+}
 /* .tp-footer-menu ul li:hover a span {
     color: #ba1d2a;
 } */
