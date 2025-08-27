@@ -2239,7 +2239,7 @@ $(window).on("load", function () {
 			let fadeTl = gsap.timeline({
 				scrollTrigger: {
 					trigger: item,
-					start: "top center+=100",
+					start: "top center+=200",
 				}
 			})
 			fadeTl.to(item, {
@@ -2741,26 +2741,7 @@ $(window).on("load", function () {
 
 		let arrow = $(".tp-main-menu-mobile .has-dropdown > a");
 
-		arrow.each(function () {
-			let self = $(this);
-			let arrowBtn = document.createElement("BUTTON");
-			arrowBtn.classList.add("dropdown-toggle-btn");
-			arrowBtn.innerHTML = "<i class='fa-light fa-plus'></i>";
-
-			self.append(function () {
-				return arrowBtn;
-			});
-
-			self.find("button").on("click", function (e) {
-				e.preventDefault();
-				let self = $(this);
-				self.toggleClass("dropdown-opened");
-				self.parent().toggleClass("expanded");
-				self.parent().parent().addClass("dropdown-opened").siblings().removeClass("dropdown-opened");
-				self.parent().parent().children(".tp-submenu").slideToggle();
-			});
-
-		});
+		
 	}
 
 
