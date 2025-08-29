@@ -373,6 +373,9 @@ h2.client-title-2, .client-title-2 {
         display: block;
         margin-left: 2px;
     }
+    .tp-offcanvas-area {
+        padding: 50px 20px;
+    }
   
 }
 
@@ -470,4 +473,131 @@ h2.client-title-2, .client-title-2 {
     /* .clientSwiper .tp-brand-4-item {
         border-left: none;
     } */
+}
+
+
+
+/* Landing Video */
+
+.landing-wrapper {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+.landing-wrapper::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    opacity: 0.65;
+    z-index: 3;
+}
+
+.landing-wrapper video {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    object-position: center;
+}
+
+.land-video .tp-header-menu > nav > ul > li > a {
+    color: #ffffff;
+}
+
+.land-video .tp-btn-border-sm {
+    color: #ffffff;
+    border: 1px solid #fff;
+}
+
+.header-sticky .tp-header-menu > nav > ul > li > a {
+    color: #000;
+}
+
+.header-sticky .tp-btn-border-sm {
+    color: #000;
+    border: 1px solid #000;
+}
+
+.header-sticky .tp-btn-border-sm:hover {
+    color: #fff;
+}
+
+.area-padding {
+    padding-top: 0px;
+}
+
+.landing-content {
+    position: relative;
+    z-index: 5;
+    height: 100%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    justify-content: end;
+    padding: 60px;
+    padding-bottom: 80px;
+}
+
+.landing-content .hero-title {
+    font-size: 62px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.landing-content .hero-content {
+    font-size: 22px;
+    line-height: 1.5;
+    width: 80%;
+}
+
+.land-video .tp-reveal-line {
+    padding-bottom: 0;
+}
+
+@media only screen and (max-width: 1200px) {
+    .landing-content {
+        width: 85%;
+    }
+    .landing-content .hero-content {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .landing-content {
+        width: 90%;
+    }
+    .landing-content .hero-content {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 767.9px) {
+    .landing-content {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .landing-content {
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 30px;
+    }
+    .landing-content .hero-title {
+        font-size: 36px;
+        margin-bottom: 10px;
+    }
+    .landing-content .hero-content {
+        font-size: 17px;
+    }
 }
