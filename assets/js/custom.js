@@ -14,7 +14,8 @@
 
       tl.to(split.chars, {
          color: '#000000',
-         stagger: 0.9,
+         duration: 2.5,
+         stagger: 0.6,
       });
 
       $(window).on("load", function () {
